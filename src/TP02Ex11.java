@@ -30,7 +30,7 @@ public class TP02Ex11 {
         System.out.println("Determinante da matriz: " + determinante);
     }
 
-    private static double calcularDeterminante(double[][] matriz) {
+    public static double calcularDeterminante(double[][] matriz) {
         int ordem = matriz.length;
 
         if (matriz[0].length != ordem) {
@@ -54,11 +54,11 @@ public class TP02Ex11 {
         return determinante;
     }
 
-    private static double cofator(double[][] matriz, int linha, int coluna) {
+    public static double cofator(double[][] matriz, int linha, int coluna) {
         return Math.pow(-1, linha + coluna) * calcularDeterminante(submatriz(matriz, linha, coluna));
     }
 
-    private static double[][] submatriz(double[][] matriz, int excluiLinha, int excluiColuna) {
+    public static double[][] submatriz(double[][] matriz, int excluiLinha, int excluiColuna) {
         int ordem = matriz.length;
         double[][] submatriz = new double[ordem - 1][ordem - 1];
 
