@@ -38,7 +38,7 @@ public class TP02Ex10 {
         scanner.close();
     }
 
-    private static double[][] calcularMatrizInversa(double[][] matriz) {
+    public static double[][] calcularMatrizInversa(double[][] matriz) {
         int ordem = matriz.length;
 
         if (matriz[0].length != ordem) {
@@ -68,7 +68,7 @@ public class TP02Ex10 {
         return inversa;
     }
 
-    private static double determinante(double[][] matriz) {
+    public static double determinante(double[][] matriz) {
         int ordem = matriz.length;
 
         if (ordem == 1) {
@@ -83,11 +83,11 @@ public class TP02Ex10 {
         return det;
     }
 
-    private static double cofator(double[][] matriz, int linha, int coluna) {
+    public static double cofator(double[][] matriz, int linha, int coluna) {
         return determinante(submatriz(matriz, linha, coluna));
     }
 
-    private static double[][] submatriz(double[][] matriz, int excluiLinha, int excluiColuna) {
+    public static double[][] submatriz(double[][] matriz, int excluiLinha, int excluiColuna) {
         int ordem = matriz.length;
         double[][] submatriz = new double[ordem - 1][ordem - 1];
 
@@ -108,7 +108,7 @@ public class TP02Ex10 {
         return submatriz;
     }
 
-    private static void imprimirMatriz(double[][] matriz) {
+    public static void imprimirMatriz(double[][] matriz) {
         for (double[] linha : matriz) {
             for (double elemento : linha) {
                 System.out.print("[" + elemento + "]\t");
